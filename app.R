@@ -181,7 +181,7 @@ server <- function(input, output) {
             coord_polar(theta = "y") +
             scale_fill_brewer(palette = "Set1") +
             annotate("text", x = 1.75, y = c(0.23, 0.77), label = c("Rho(X^c)", "Rho(X)"), size = 6, parse = TRUE) +
-            annotate("text", x = 1.75, y = c(0.28, 0.72), label = as.character(round(toPlot$count/sum(toPlot$count), 4)), size = 6, parse = TRUE) +
+            annotate("text", x = 1.75, y = c(0.28, 0.72), label = sprintf("%.4f", toPlot$count/sum(toPlot$count)), size = 6) +
             xlim(c(-1, 4))
     })
 }
